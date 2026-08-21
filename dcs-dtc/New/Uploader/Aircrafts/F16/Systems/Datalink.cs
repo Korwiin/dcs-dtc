@@ -64,7 +64,7 @@ public partial class F16Uploader
                         tdoa = config.Datalink.TDOAMembers[i];
                     }
 
-                    if (member == "-1") continue;
+                    if (string.IsNullOrEmpty(member)) continue;
 
                     Cmd(UFC.DOWN);
                     Cmd(Digits(UFC, member.ToString()));
