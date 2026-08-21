@@ -13,7 +13,6 @@ internal class PresetDataSender
             using (var sw = new StreamWriter(ns))
             {
                 //System.Diagnostics.Debug.WriteLine(str);
-                File.WriteAllText(Path.Combine(Path.GetTempPath(), "dtc-last-command.lua"), str); // TEMP DEBUG - remove before PR
                 sw.WriteLine(str);
                 sw.Flush();
             }
