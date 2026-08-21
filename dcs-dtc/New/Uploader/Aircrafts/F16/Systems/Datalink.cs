@@ -128,7 +128,7 @@ public partial class F16Uploader
 
     private Condition TDOA(string position, string status)
     {
-        return new Condition("FlightLead('" + position + "','" + status + "')");
+        return new Condition("TDOA('" + position + "','" + status + "')");
     }
 
     private CustomCommand EnableXMIT(string data)
