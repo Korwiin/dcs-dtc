@@ -26,7 +26,12 @@ namespace DTC.UI.Base.Controls
         public override string Text
         {
             get { return textBox.Text; }
-            set { textBox.Text = value; }
+            set
+            {
+                textBox.Text = value;
+                currentValue = string.IsNullOrEmpty(value) ? null
+                    : (decimal.TryParse(value, NumberStyles.Number, CultureInfo.InvariantCulture, out var result) ? result : null);
+            }
         }
 
         public bool AllowFraction { get; set; } = false;
