@@ -309,9 +309,9 @@ function DTC_F16C_CheckCondition_CRMMode(mfd, mode)
         table = DTC_F16C_GetRightMFD();
     end
 
-    local rws = table["RWS Table. Root. Unic ID: _id:13.2.RWS Table. Root. Unic ID: _id:13. Text.1"] or "";
-    local vsr = table["VSR Table. Root. Unic ID: _id:15.2.VSR Table. Root. Unic ID: _id:15. Text.1"] or "";
-    local tws = table["TWS Table. Root. Unic ID: _id:16.2.TWS Table. Root. Unic ID: _id:16. Text.1"] or "";
+    local rws = table["RWS Table. Root. Unic ID: _id:14.2.RWS Table. Root. Unic ID: _id:14. Text.1"] or "";
+    local vsr = table["VSR Table. Root. Unic ID: _id:16.2.VSR Table. Root. Unic ID: _id:16. Text.1"] or "";
+    local tws = table["TWS Table. Root. Unic ID: _id:17.2.TWS Table. Root. Unic ID: _id:17. Text.1"] or "";
     if (mode == "RWS" and rws == "RWS") or (mode == "VSR" and vsr == "VSR") or (mode == "TWS" and tws == "TWS") then
         return true
     end
