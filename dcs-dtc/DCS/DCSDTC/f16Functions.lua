@@ -217,7 +217,7 @@ function DTC_F16C_CheckCondition_HTSAllNotSelected(mfd)
         mfdTable = DTC_F16C_GetRightMFD();
     end
 
-    local str = mfdTable["ROOT_PAGE.2.HAD_THRT_PAGE.2.ALL Table. Root. Unic ID: _id:12.2.ALL Table. Root. Unic ID: _id:12. Text.1"];
+    local str = mfdTable["ROOT_PAGE.2.HAD_THRT_PAGE.2.ALL Table. Root. Unic ID: _id:15.2.ALL Table. Root. Unic ID: _id:15. TextPH_id:18.2.ALL Table. Root. Unic ID: _id:15. TextPH_id:18. Text.1"];
     if str == "ALL" then
         return true
     end
@@ -328,7 +328,7 @@ function DTC_F16C_CheckCondition_FCRBars(mfd, expectedBars)
         table = DTC_F16C_GetRightMFD();
     end
 
-    local bars = table["FCR_NotModeMenu_RootAA.2.Table. Root. Unic ID: _id:7.2.Table. Root. Unic ID: _id:7. Text.1"] or "";
+    local bars = table["FCR_NotModeMenu_RootAA.2.Table. Root. Unic ID: _id:8.2.Table. Root. Unic ID: _id:8. Text.1"] or "";
     local agr = table["AGR Table. Root. Unic ID: _id:9.2.AGR Table. Root. Unic ID: _id:9. Text.1"] or "";
 
     if agr == "AGR" or bars == "" or bars == expectedBars then
@@ -387,10 +387,10 @@ function DTC_F16C_CheckCondition_FCRRangeAuto(mfd)
         table = DTC_F16C_GetRightMFD();
     end
 
-    local val = table["FCR_NotModeMenu_RootAG.2.FCR_MapMenu_RootAG.2.NORM Table. Root. Unic ID: _id:75.2.NORM Table. Root. Unic ID: _id:75. Text.1"] or "";
+    local val = table["FCR_NotModeMenu_RootAG.2.FCR_MapMenu_RootAG.2.AUTO Table. Root. Unic ID: _id:17.2.AUTO Table. Root. Unic ID: _id:17. Text.1"] or "";
     local agr = table["AGR Table. Root. Unic ID: _id:9.2.AGR Table. Root. Unic ID: _id:9. Text.1"] or "";
 
-    if agr == "AGR" or val == "NORM" or val == "" then
+    if agr == "AGR" or val ~= "AUTO" then
         return false
     end
 
