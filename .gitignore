@@ -340,3 +340,8 @@ healthchecksdb
 
 commit.bat
 commit2.bat
+
+# Local investigation/testing artifacts
+/tools/
+/DTC_Communications.md
+/Temp-release-plan.md
