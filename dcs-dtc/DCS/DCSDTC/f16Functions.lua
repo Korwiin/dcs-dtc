@@ -347,8 +347,8 @@ function DTC_F16C_CheckCondition_FCRAzimuth(mfd, expAz)
         table = DTC_F16C_GetRightMFD();
     end
 
-    local az = table["FCR_NotModeMenu_RootAA.2.Table. Root. Unic ID: _id:8.2.Table. Root. Unic ID: _id:8. Text.2"] or 
-                table["FCR_NotModeMenu_RootAG.2.Table. Root. Unic ID: _id:23.2.Table. Root. Unic ID: _id:23. Text.2"] or "";
+    local az = table["FCR_NotModeMenu_RootAA.2.Table. Root. Unic ID: _id:9.2.Table. Root. Unic ID: _id:9. Text.2"] or
+                table["FCR_NotModeMenu_RootAG.2.Table. Root. Unic ID: _id:34.2.Table. Root. Unic ID: _id:34. Text.2"] or "";
     local agr = table["AGR Table. Root. Unic ID: _id:9.2.AGR Table. Root. Unic ID: _id:9. Text.1"] or "";
 
     if agr == "AGR" or az == "" or az == expAz then
